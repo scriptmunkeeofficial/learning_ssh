@@ -30,7 +30,7 @@
         <ul>
             <li>Create a config file under $HOME/.ssh</li>
             <li>Add a global Host config for key management</li>
-            <li>Add a jump server configuration (ie jump.ignidus.net)</li>
+            <li>Add a jump server configuration (ie jump.servername.net)</li>
             <li>a destination host configuration that uses the jump server as a JumpProxy</li>
         </ul>
 
@@ -74,8 +74,8 @@
         <h4>Add the following below your global configuration</h4>
 
         <p class='shell'>
-        Host jump jump jump.local
-        HostName jump.local
+        Host jump jump jump.servername.net
+        HostName jump.servername.net
         User ken <--- change to your user name </p> <h4>Add you destination server to your SSH config file</h4>
         <ol>
             <li>Open a Terminal</li>
@@ -175,7 +175,7 @@
             <li>Enter a Saved Session name (i.e. dev.dev)</li>
             <li>Select Proxy from the Connection submenu</li>
             <li>Click the Local radio button</li>
-            <li>Enter the jump server path (i.e. jump.ignigus.net)</li>
+            <li>Enter the jump server path (i.e. jump.servername.net)</li>
             <li>Enter the port number 22</li>
             <li>In the Telnet connect section, add the path to plink followed by your username and the Environment variable reference for the proxy host followed by the Environment variable reference to the final destination host & port</li>
 
@@ -185,7 +185,7 @@
             "C:\Program Files (x86)\PuTTY\plink.exe" ken@%proxyhost -nc %host:%port
             </P>
 
-            <li>Reselect Session above and Save the new configuration</li>
+            <li>Re-select Session above and Save the new configuration</li>
             <li>Click open to verify you can open a ssh section to your destination host/server</li>
         </ol>
         </div>
